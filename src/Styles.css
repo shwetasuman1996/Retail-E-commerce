@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fixed navbar at the top */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px;
+    color: white;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px;
+  }
+  
+  .location-select,
+  .shop-now {
+    padding: 8px;
+    background: #555;
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  /* Home Container: video background + offset for navbar */
+  .home-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 70px; /* offset for the fixed navbar */
+  }
+  
+  .background-video {
+    width: 100%;
+    height: 100%;
+        object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .home-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 40%;
+    z-index: 1;
+    transform: translateY(-40%);
+  }
+  
+  /* About Us Section */
+  .about-section {
+    display: flex;
+    flex-wrap: wrap; /* responsive on smaller screens */
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    position: relative;
+    z-index: 1; 
+    padding: 60px 10%;
+    margin-top: 50vh; /* push below the visible part of the video */
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .know-more {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Products Page */
+  .products-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: 70px; /* offset for fixed navbar */
+  }
+  
+  .products-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  

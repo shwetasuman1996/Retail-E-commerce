@@ -1,0 +1,230 @@
+/* ✅ Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Left (Logo), Center (Links), Right (Cart) */
+  align-items: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* ✅ Logo (Left Side) */
+.navbar-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar-logo a:hover {
+  color: #222;
+}
+
+/* ✅ Navigation Links (Center) */
+.navbar-links {
+  display: flex;
+  flex-grow: 1; /* Takes max space */
+  justify-content: center; /* Centered links */
+  gap: 2rem;
+}
+
+.navbar-links a {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #222;
+}
+
+/* ✅ Cart Button (Right Side, Adjusted Left) */
+.navbar-cart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Right alignment */
+  margin-right: 3rem; /* ✅ Left shift for better alignment */
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.cart-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cart-icon {
+  margin-right: 5px;
+  font-size: 1.4rem;
+}
+
+/* ✅ Responsive Navbar */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+  }
+
+  .navbar-cart {
+    margin-right: 1rem; /* Less margin in smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar-cart {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+/* ✅ Authentication Button */
+.auth-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #222;
+}
+
+/* ✅ Modal Styling */
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100; /* Ensures it stays above the navbar */
+}
+
+.auth-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.auth-modal input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.auth-modal button {
+  width: 100%;
+  padding: 10px;
+  background: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.auth-modal button:hover {
+  background: #feb47b;
+}
+
+/* ✅ Close Button */
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* ✅ Toggle Sign In / Sign Up */
+.auth-modal p {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.auth-modal p button {
+  background: none;
+  border: none;
+  color: #ff7e5f;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.auth-modal p button:hover {
+  color: #feb47b;
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-link {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.auth-link:hover {
+  background: white;
+  color: #222;
+}
