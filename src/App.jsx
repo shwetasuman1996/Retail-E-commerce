@@ -24,13 +24,14 @@
 // }
 
 
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router";
 import Navbar from "./components/Navbar";  
 import Home from "./components/Home";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import { CartProvider } from "./context/CartContext";
 
 function Layout() {
   const location = useLocation();
@@ -52,8 +53,10 @@ function Layout() {
 
 export default function App() {
   return (
-    <Router>
-      <Layout />
-    </Router>
+    <CartProvider>
+      <Router>
+        <Layout />
+      </Router>
+    </CartProvider>
   );
 }
