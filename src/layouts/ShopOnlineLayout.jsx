@@ -1,6 +1,6 @@
 // ShopOnlineLayout.js
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 /**
  * A layout that does NOT render the main Navbar.
